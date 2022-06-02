@@ -54,10 +54,10 @@ function Navbar(props) {
         }} />
         <Search><InputBase placeholder='Search...' /></Search>
         <Icons>
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={1} color="error">
             <Mail />
           </Badge>
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={3} color="error">
             <Notifications />
           </Badge>
           <Avatar alt="Nik" src="avatar.jpg" sx={{
