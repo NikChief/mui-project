@@ -63,6 +63,8 @@ function Sidebar(props) {
         sm: "block"
       }
     }}>
+      <Box position={'fixed'}
+      >
       <List>
         <ListItem disablePadding>
           <ListItemButton component='a' href='#home'>
@@ -127,6 +129,7 @@ function Sidebar(props) {
           />
         </ListItem>
       </List>
+      </Box>
     </Box>
   );
 }
