@@ -1,8 +1,13 @@
 import React from 'react';
 import { Favorite, FavoriteBorder, MoreVert, Share } from '@mui/icons-material';
 import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-function Post({post}) {
+function Post({post, setPosts}) {
+  const deleteHandler = (event) => {
+    const id = post.id;
+    setPosts((posts)=>[...posts].filter(post=>post.id!==id))
+  }
   return (
     <Card sx={{margin: 4}}>
       <CardHeader
@@ -12,8 +17,10 @@ function Post({post}) {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MoreVert />
+          <IconButton aria-label="hide" title='Hide news from feed' id={post.id}
+          onClick={deleteHandler}
+          >
+            <VisibilityOffIcon />
           </IconButton>
         }
         title={post.author}

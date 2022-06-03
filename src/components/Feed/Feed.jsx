@@ -3,13 +3,12 @@ import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Che
 import React, { useState } from 'react';
 import Post from '../Post/Post';
 
-function Feed({posts}) {
+function Feed({posts, setPosts}) {
   
 
   return (
     <Box flex={4} p={2}>
-      {posts.map(post => < Post key={Math.random().toString()} post={post}/>)}
-      
+      {posts.map(post => < Post key={post.id} post={post} setPosts={setPosts}/>)}
     </Box>
   );
 }

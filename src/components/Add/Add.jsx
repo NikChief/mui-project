@@ -35,6 +35,7 @@ function Add({posts, setPosts}) {
   const submitHandler = event => {
     event.preventDefault();
     setPosts(posts=>[{
+      id: Math.random().toString(),
       avatar: 'avatar.jpg',
       author: 'Nik Chief',
       image: event.target.image.value,
