@@ -7,8 +7,8 @@ function Post(props) {
     <Card sx={{margin: 4}}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe">
-            R
+          <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe" src="avatar.jpg">
+            
           </Avatar>
         }
         action={
