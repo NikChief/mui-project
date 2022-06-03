@@ -2,12 +2,12 @@ import React from 'react';
 import { Favorite, FavoriteBorder, MoreVert, Share } from '@mui/icons-material';
 import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material';
 
-function Post(props) {
+function Post({post}) {
   return (
     <Card sx={{margin: 4}}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe" src="avatar.jpg">
+          <Avatar sx={{ bgcolor: 'red' }} aria-label="recipe" src={post.avatar}>
             
           </Avatar>
         }
@@ -16,21 +16,19 @@ function Post(props) {
             <MoreVert />
           </IconButton>
         }
-        title="Nik Chief"
+        title={post.author}
         subheader="May 13, 2022"
       />
       <CardMedia
         component="img"
         height="20%"
-        image="https://www.apkholding.ru/upload/medialibrary/502/502fd1ea12a31f18c9819a37547b271a.jpg"
+        image={post.image}
         alt="Paella dish"
 
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the mussels,
-          if you like.
+          {post.content}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
