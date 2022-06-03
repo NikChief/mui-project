@@ -77,10 +77,6 @@ function Add({posts, setPosts}) {
           </Typography>
         </UserBox>
         <form action='post' onSubmit={submitHandler}>
-          <Input placeholder="Attach a link to an image on the web" name='image'
-            sx={{
-              width: '100%'
-            }}/>
           <TextField
             id="standard-multiline-static"
             label="Write your post"
@@ -92,6 +88,11 @@ function Add({posts, setPosts}) {
               width: '100%'
             }}
           />
+            <Input placeholder="Attach a link to an image on the web" name='image'
+              sx={{
+                width: '100%',
+                marginTop: '20px'
+              }}/>
           <Stack direction='row' sx={{
             justifyContent: 'space-between',
             padding: '1%'
