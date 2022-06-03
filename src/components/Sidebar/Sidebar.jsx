@@ -8,7 +8,7 @@ import SettingsInputCompositeIcon from '@mui/icons-material/SettingsInputComposi
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import React from 'react';
 
-const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+const ThemeSwitch = styled(Switch)(({ theme }) => ({
   width: 62,
   height: 34,
   padding: 7,
@@ -55,7 +55,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function Sidebar(props) {
+function Sidebar({mode, setMode}) {
   return (
     <Box flex={1} p={2} sx={{
       display: {
@@ -124,7 +124,9 @@ function Sidebar(props) {
         </ListItem>
         <ListItem disablePadding>
           <FormControlLabel
-            control={<MaterialUISwitch sx={{ m: 1 }} />}
+            control={<ThemeSwitch sx={{ m: 1 }}
+            onChange={e=>setMode(mode==='light'? 'dark' : 'light')} 
+            />}
             label="Dark Mode"
           />
         </ListItem>
